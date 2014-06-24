@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-
+	// make a square grid based on user input
 	function makeGrid(n) {
 		var grid = $('#container');
 		for (var i = 1;i<=n; i++) {
@@ -12,17 +12,28 @@ $(document).ready(function() {
 		}
 	};
 
-	$('.square').hover(function() {
-	$(this).addClass('hover');
+	// change color of each square on hover
+	$(document).on('mouseenter','.square',function() {
+        $(this).addClass('hover');
+    });
 	
+
+	$('#button').click(function() {
+		buttonClick();
+
 	});
 
-	
 
-	
-	
+	function buttonClick() {
+		var input = +window.prompt('enter a number for a square canvas (AxA)');
+		$('.square').remove();
+		$('.new_row').remove();
+		makeGrid(input);
+		console.log(input);
+	}
 
-	makeGrid(4);
+
+	makeGrid(50);
 			
 
 
