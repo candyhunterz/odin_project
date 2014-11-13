@@ -1,0 +1,25 @@
+.container {
+	overflow: auto;
+	width: 960px;
+	margin: auto;
+}
+
+.square {
+	height: 20px;
+	width: 20px;
+	border: 1px solid;
+	display: block;
+	float: left;
+
+}
+.new_row {
+	clear:both;
+}
+
+.hover {
+	background-color: red;
+}
+
+.square:hover {
+	background-color: red;
+}
