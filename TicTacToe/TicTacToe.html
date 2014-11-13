@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nguyen Nguyen A00907782, Delmark Tanner A00888798</title>
+	<script src="js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/style.css"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	
+</head>
+<body>
+	<div class="container">
+	<div class="jumbotron">
+		<h1>Tic Tac Toe</h1>
+		<h3>T1CT4CT03 for real men!</h3>
+	</div>
+	<div class="background">
+	<div id="monkeyScore">
+		<h1>0</h1>
+	</div>
+	<div id="dragonScore">
+		<h1>0</h1>
+	</div>
+	<div id="board">
+		<table>
+			<tr>
+				<td id='d0' ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id='d1' ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id='d2' ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			</tr>
+			<tr>
+				<td id='d3' ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id='d4' ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id='d5' ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			</tr>
+			<tr>
+				<td id='d6' ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id='d7' ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id='d8' ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			</tr>
+		</table>
+	</div>
+	
+	<img id="drag1" src="images/monkey.png" draggable="true" 
+		ondragstart="drag(event)" width="75" height="75" alt="monkey"/>
+	<img id="drag2" src="images/dragon.png" draggable="true" 
+		ondragstart="drag(event)" width="75" height="75" alt="dragon"/>
+	</div>
+	<div class="button">
+		<button type="button" class="btn btn-primary" onclick="restart()">Restart</button>
+		
+	</div>
+	</div>
+</body>
+</html>
