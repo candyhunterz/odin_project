@@ -1,0 +1,58 @@
+body, #board {
+	text-align: center;
+}
+
+#board {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#choice {
+	padding-bottom: 30px;
+}
+
+.background {
+	background-color: #c9c9ff;
+}
+
+table, td  {
+	border: 1px solid black;
+	padding: 10px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	max-height: 100px;
+	max-width: 100px;
+	background-color: #ffffff;
+}
+table {
+	border-collapse: collapse;
+	text-align: center;
+	table-layout: fixed;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img {
+	position: relative;
+}
+
+.button {
+	padding-top: 20px;
+	margin-right: auto; 
+}
+
+#monkeyScore  {
+	position: relative;
+	float: left;
+	top: 80px;
+	left: 180px;
+}
+
+#dragonScore  {
+	position: relative;
+	float: right;
+	top: 80px;
+	right: 180px;
+	
+}

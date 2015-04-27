@@ -128,4 +128,3 @@ function nextGame() {
 	document.getElementById("drag2").setAttribute("draggable", "true");
 }	
 
-

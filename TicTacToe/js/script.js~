@@ -1,0 +1,8 @@
+$(document).ready(function() {
+
+	// initialize the game state
+	function setColor() {
+		
+	}
+
+});
