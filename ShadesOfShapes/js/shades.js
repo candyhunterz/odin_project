@@ -4,7 +4,7 @@ $(document).ready(function() {
 	var board = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 	var row1, row2, row3, row4, row5, col1, col2, col3, col4, col5, leftDiag, rightDiag;
 	var correct = 0;
-	var checkIMG = '<img id="checkmark" src="images/check.png" alt="checkmark" width="100" height="100" />';
+	
 	//function to randomize the colors of the cell
 	function randomize(color,shape) {
 		for (var i=0; i<board.length; i++) {
@@ -47,9 +47,7 @@ $(document).ready(function() {
 		var color = $(this).css("background-color");
 		var choiceColor = $("#choice td").css("background-color")
 		if (color === choiceColor) {
-			//$(this).css({backgroundColor: '#FFFFFF'});
-			$(this).attr('class', 'checkmarked');	
-			$(this).html(checkIMG);
+			$(this).css({backgroundColor: '#FFFFFF'});
 			$(this).animate({
 			opacity: 1}, 0, function(){});
 			correct += 1;
@@ -74,6 +72,20 @@ $(document).ready(function() {
 		}
 
 	});
+
+	// function to generate shape
+	function makeShape(shape) {
+		switch (shape) {
+			case 'triangle': break;
+			case 'square': 
+			break;
+			case 'circle': break;
+			case 'hexagon': break;
+			case 'diamond': break;
+			case 'octagon': break;
+			default: ;
+		}
+	}
 
 
 
