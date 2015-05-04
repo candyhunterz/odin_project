@@ -66,7 +66,7 @@ $(document).ready(function() {
 		reset();
 		for (var i=0; i<board.length; i++) {
 			$("#d" + i).animate({
-				opacity: 0}, 5000, function() {
+				opacity: 0, color: '#FFFFFF'}, 5000, function() {
 
 				});
 
