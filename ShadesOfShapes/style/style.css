@@ -1,29 +1,29 @@
 body, #board {
 	text-align: center;
+	
 }
 
 #board {
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 #choice {
 	padding-bottom: 30px;
 }
 
-.background {
-	background-color: #c9c9ff;
-}
+
 
 table, td  {
 	border: 1px solid black;
-	padding: 10px;
-	width: 100px;
-	height: 100px;
+	
+	width: 72.5px;
+	height: 72.5px;
 	text-align: center;
 	max-height: 100px;
 	max-width: 100px;
 	background-color: #ffffff;
+	
 }
 table {
 	border-collapse: collapse;
@@ -42,17 +42,31 @@ img {
 	margin-right: auto; 
 }
 
-#monkeyScore  {
-	position: relative;
-	float: left;
-	top: 80px;
-	left: 180px;
+.ui-content {
+	margin: 0;
+	padding: 0;
 }
 
-#dragonScore  {
+#score p {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+#level p {
+	text-align: left;
+	display: inline;
+}
+#level {
+	text-align: left;
+}
+
+#hex {
+	background-color: red;
+	width: 40px;
+	height: 40px;
+}
+
+svg {
 	position: relative;
-	float: right;
-	top: 80px;
-	right: 180px;
-	
 }
