@@ -15,4 +15,4 @@ def translate(word)
 	end
 end
 
-print translate("hello")
+print translate("hello");

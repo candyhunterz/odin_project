@@ -3,9 +3,10 @@ $(document).ready(function() {
 	// init game constants
 	var board = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 	var row1, row2, row3, row4, row5, col1, col2, col3, col4, col5, leftDiag, rightDiag;
-
+	var correct = 0;
+	var checkIMG = '<img id="checkmark" src="images/check.png" alt="checkmark" width="100" height="100" />';
 	//function to randomize the colors of the cell
-	function randomize() {
+	function randomize(color,shape) {
 		for (var i=0; i<board.length; i++) {
 			var num = Math.floor(Math.random()*3)
 			var color='';
@@ -26,34 +27,43 @@ $(document).ready(function() {
 
 	// initialize game state
 	function setColor() {
-		
 		randomize();
 	}
+	
 	//function to return the color of selection box
 	function getChoiceColor() {
 		$("#choice td").css("background-color")
-
 	}
 
 
+	function reset() {
+		$("img").remove("#checkmark");
+		$("td").animate({
+		opacity: 1}, 0, function(){});
+		setColor();
+	}
 	// function to get the color of a clicked cell
 	$("td").click(function() {
 		var color = $(this).css("background-color");
 		var choiceColor = $("#choice td").css("background-color")
 		if (color === choiceColor) {
-			$(this).css({backgroundColor: '#FFFFFF'})
+			//$(this).css({backgroundColor: '#FFFFFF'});
+			$(this).attr('class', 'checkmarked');	
+			$(this).html(checkIMG);
+			$(this).animate({
+			opacity: 1}, 0, function(){});
+			correct += 1;
 		}
 		console.log(color);
 	})
 
 	
 	$("#restart").click(function() {
-		setColor();
-
-	})
+		reset();
+	});
 
 	$("#timed").click(function() {
-		setColor();
+		reset();
 		for (var i=0; i<board.length; i++) {
 			$("#d" + i).animate({
 				opacity: 0}, 5000, function() {
@@ -63,11 +73,10 @@ $(document).ready(function() {
 			
 		}
 
-	})
+	});
 
 
 
 setColor();
 
 });
-
